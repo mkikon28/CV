@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Sample [HTML, CSS, JS]</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS for interactive elements */
+        .details {
+            display: none;
+        }
+        .expand-collapse {
+            cursor: pointer;
+            text-decoration: underline;
+            color: #27aae1;
+        }
+        /* Style for the horizontal line */
+        hr {
+            margin: 30px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+   
+<div id="page">
+    <div class="photo-and-name">
+        <img src="profile.png" class="photo" alt="Profile Picture">
+        <div class="contact-info-box">
+            <h1 class="name">Meribemo Kikon</h1>
+            <br>
+            <p class="contact-details">Mobile: 6009842735 &nbsp; - &nbsp; Email: mkikon28@gmial.com</p>
+        </div>
+    </div>
+    <div id="objective">
+        <h3>Objective</h3>
+        <p>
+            An enthusiastic and motivated individual with a keen interest in contributing positively to a dynamic work environment. 
+            Seeking opportunities to leverage my skills and passion for learning to make meaningful contributions to the team 
+            and achieve collective goals.
+        </p>
+    </div>
+    <div id="education">
+        <h3 class="expand-collapse" onclick="toggleDetails('education-details')">Education [+]</h3>
+        <div class="details" id="education-details">
+            <table>
+                <tr class="school-1">
+                    <td>2021 - Present</td>
+                    <td><b>&nbsp&nbspMaster of Computer Applications</b>: National Institute of Technology, Trichy</td>
+                </tr>           
+                <tr class="school-2">
+                    <td>2018 - 2021</td>
+                    <td><b>&nbsp&nbspBachelor of Computer Applications</b>: NIELIT, Kohima</td>
+                </tr>         
+                <tr>
+                    <td>2014 - 2016</td>
+                    <td><b>&nbsp&nbspIntermediate</b>: Don Bosco Hr. Sec. School, Kohima</td>
+                </tr>
+                <tr>
+                    <td >2013 - 2014</td>
+                    <td><b>&nbsp&nbspMatriculation</b>: Don Bosco School, Tseminyu</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="work">
+        <h3>Experience</h3>
+        <table>
+            <tr>
+                <td class = "exp-name"><b>Cybersecurity Intern (Nielit Kohima)</b></td>
+                <td class = "exp-year"><b>July 2023</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Gaining hands-on experience in digital forensics, threat analysis, and security practices
+                    <div class="dropdown">
+                        <button onclick="toggleExperienceDetails()">More Info</button>
+                        <button style="display: none;" onclick="toggleDetails('project-details-less')">Less Info</button>
+                    </div>
+                    <div class="details" id="experience-details">
+                        <p> Involved working extensively with tools such as FTK Imager for forensic imaging, 
+                            Mobile Data Retriever for mobile data extraction, and WriteBlocker for secure data 
+                            acquisition. Additionally, I conducted vulnerability assessments focusing on OWASP 
+                            Top 10 security risks and gained practical knowledge by exploring popular attack 
+                            techniques such as phishing, malware, and social engineering. Through these experiences, 
+                            I developed a comprehensive understanding of cybersecurity principles and 
+                            practical skills in safeguarding digital assets.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="projects">
+        <h3>Projects</h3>
+        <div class="project">
+            <table>
+                <tr>
+                    <td class="project-name">Attendance Management System</td>
+                    <td class="project-year">2021</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        A facial recognition system using machine learning algorithm
+                        <div class="dropdown">
+                            <button onclick="toggleProjectDetails()">More Info</button>
+                            <button style="display: none;" onclick="toggleDetails('project-details-less')">Less Info</button>
+                        </div>
+                        <div class="details" id="project-details">
+                            <p> The attendance management system utilizes machine learning algorithms, 
+                                including Haar Cascade for face detection and LBPH for face recognition. 
+                                This enables efficient and accurate tracking of attendance by automatically 
+                                detecting and recognizing faces, streamlining the process in educational or workplace 
+                                settings.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <div id="skills">
+        <h3 class="expand-collapse" onclick="toggleDetails('skills-details')">Skills [+]</h3>
+        <div class="details" id="skills-details">
+            <table>
+                <tr>
+                    <td>Programming Language:</td>
+                    <td><b>Python, SQL</b></td>
+                </tr>
+                <tr>
+                    <td>Operating System:</td>
+                    <td><b>MS Windows, Linux</b></td>
+                </tr>
+                <tr>
+                    <td>Tools:</td>
+                    <td><b>WireShark, FTK Imager, Nmap, Metasploit, MS Office</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Horizontal line with spacing added here -->
+    <hr>
+    <!-- LinkedIn Section -->
+    <div id="linkedin">
+        
+        <p>
+            Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/meribemo-kikon-21a531154/" target="_blank">LinkedIn Profile</a>
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
